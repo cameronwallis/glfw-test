@@ -17,3 +17,5 @@ CPMAddPackage(
 )
 target_link_libraries(${PROJECT_NAME} glfw)
 target_include_directories(${PROJECT_NAME} PRIVATE include)
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/shaders DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
